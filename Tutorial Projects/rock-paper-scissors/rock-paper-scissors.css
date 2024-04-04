@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    margin: 10px;
+}
+.button-container{
+    margin-top: 30px;
+}
+.btn{
+    margin: 5px 40px;
+    height: 38px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-size: 20px;
+}
+#rock{
+    background-color: #ff00003d;
+}
+#rock:hover{
+    background-color: #ff000021;
+}
+#paper{
+    background-color: #00ff223d;
+}
+#paper:hover{
+    background-color: #00ff2221;
+}
+#scissors{
+    background-color: #0026ff3d;
+}
+#scissors:hover{
+    background-color: #0026ff21;
+}
+
+#rock:active{
+    background-color: #ad000088;;
+}
+#paper:active{
+    background-color: #00ad1788;;
+}
+#scissors:active{
+    background-color: #0003ad88;;
+}
+
+.instruction,.result-text{
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+/* Score Style */
+.score-container{
+    display: flex;
+    justify-content: center;
+}
+
+.score-table{
+    border: 3px solid black;
+    border-radius: 18px;
+    width: 150px;
+    margin: 20px;
+    padding: 5px;
+    background-color: #40e9f569;
+    color: #000000;
+}
+.score-table th,.score-table td{
+    width: 33.33%;
+    font-weight: 600;
+    height: 30px;
+}
+.score-table td{
+    font-size: 20px;
+}
+.reset-btn{
+    margin-top: 30px;
+    font-size: 25px;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 30px;
+    border: 1px solid black;
+}
+.reset-btn:active{
+    background-color: #bdbdbd;
+}
+
+footer{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    position: relative;
+    top: 100px;
+    margin-left: 33px;
+}

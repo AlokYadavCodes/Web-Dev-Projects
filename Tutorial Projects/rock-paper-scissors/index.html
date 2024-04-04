@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="rock-paper-scissors.css">
+</head>
+<body>
+    <h1>Rock Paper Scissors Game</h1>
+    <hr>
+    <p class="instruction">Choose any one of these:</p>
+    <div class="button-container">
+
+        <button class="btn" id="rock"
+        onclick="const userChoice=`rock`;
+        resultGenerater(userChoice);
+        ">Rock</button>
+
+        <button class="btn" id="paper"
+        onclick="userChoice=`paper`;
+        resultGenerater(userChoice);
+        ">Paper</button>
+
+        <button class="btn" id="scissors"
+        onclick="userChoice=`scissors`;
+        resultGenerater(userChoice);
+        ">Scissors</button>
+
+    </div>
+    <p class="result-text">Let's start the game.</p>
+    <div class="score-container">
+        <table class="score-table">
+            <tr>
+                <th>Win</th>
+                <th>Lose</th>
+                <th>Tie</th>
+            </tr>
+            <tr>
+                <td id="win">0</td>
+                <td id="lose">0</td>
+                <td id="tie">0</td>
+            </tr>
+        </table>
+    </div>
+    <h3> <button class="reset-btn" onclick="reset();">RESET</button></h3>
+
+
+
+
+
+    <!-- <footer>
+        Made with 🧡 by <a target="_blank" href="https://x.com/alokcodes">Alok</a>
+    </footer> -->
+    
+    <script src="rock-paper-scissors.js"></script>
+</body>
+</html>
