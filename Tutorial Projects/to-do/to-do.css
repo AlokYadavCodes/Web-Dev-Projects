@@ -8,11 +8,14 @@ body{
 }
 h1{
     text-align: center;
+    margin: 10px;
+    font-size: 40px;
 }
 .add-task{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 input{
     margin: 10px 15px;
@@ -56,20 +59,14 @@ button{
         display: flex;
         flex-direction: column;
     }
-    input{
-        height: 35px;
-        margin: 5px;
-    }
-    button{
-        height: 32px;
-        width: 65px;
+    input,input{
         margin: 5px;
     }
     .added-task{
-        font-size: 14px;
+        font-size: 16px;
         display: grid;
         margin: 5px;
-        grid-template-columns: 35% 35% 20%
+        grid-template-columns: 40% 40% 17%
     }
     .task-field, .date-field{
         margin: 3px;
