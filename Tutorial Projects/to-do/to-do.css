@@ -66,14 +66,17 @@ footer{
         display: flex;
         flex-direction: column;
     }
-    input,input{
+    input,button{
         margin: 5px;
+    }
+    input{
+        width: 200px;
     }
     .added-task{
         font-size: 16px;
         display: grid;
         margin: 5px;
-        grid-template-columns: 39% 39% 15%
+        grid-template-columns: 38% 38% 20%
     }
     .task-field, .date-field{
         margin: 3px;
