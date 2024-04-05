@@ -41,34 +41,36 @@ function resultGenerater(userChoice){
     let computerChoice=computerChoiceGenerater();
     let result;
     if(userChoice===computerChoice){
-        result=`it's a tie`;
+        result=`It's a tie!`;
         score.tie++;
     }
     else if(userChoice===`rock` && computerChoice===`paper`){
-        result=`computer won`;
+        result=`Computer Won!`;
         score.lose++;
     } 
     else if(userChoice===`rock` && computerChoice===`scissors`){
-        result=`you won`;
+        result=`You Won!`;
         score.win++;
     } 
     else if(userChoice===`paper` && computerChoice===`rock`){
-        result=`you won`;
+        result=`You Won!`;
         score.win++;
     } 
     else if(userChoice===`paper` && computerChoice===`scissors`){
-        result=`computer won`;
+        result=`Computer Won!`;
         score.lose++;
     } 
     else if(userChoice===`scissors` && computerChoice===`rock`){
-        result=`computer won`;
+        result=`Computer Won!`;
         score.lose++;
     } 
     else if(userChoice===`scissors` && computerChoice===`paper`){
-        result=`you won`;
+        result=`You Won!`;
         score.win++;
     }
-    document.querySelector('.result-text').innerText=`You have choosen ${userChoice}. Computer choose ${computerChoice} and ${result}.`
+    document.querySelector('.result-text').innerText=`Your choice: ${userChoice} 
+        Computer choice: ${computerChoice} 
+        ${result}`
     scoreUpdate();
 };
 
