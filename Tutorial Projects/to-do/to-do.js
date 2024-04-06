@@ -37,3 +37,5 @@ function displayTask(){
 
 let today=new Date().toISOString().slice(0,10);
 document.querySelector('#date-input').min=today;
+
+document.querySelector('#date-input').value=today;
