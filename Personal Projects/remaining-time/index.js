@@ -1,4 +1,5 @@
 let intervalID;
+calculate();
 function calculate(){
     clearInterval(intervalID);
     let startDate=document.querySelector('#start-date').value;
@@ -89,7 +90,7 @@ endDateInput.min=todayDate;
 
 //controls button
 
-let stop=()=>alert('समय रोकने से नहीं रुकता। \nकाम करो बक*दी नही।');
+let stop=()=>alert('समय रोकने से नहीं रुकता। \nकाम करो, बक*दी नही।');
 let reset=()=>{
     clearInterval(intervalID);
     document.querySelector('.display').innerHTML='';
