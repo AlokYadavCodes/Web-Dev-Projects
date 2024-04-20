@@ -17,14 +17,16 @@ function calculate(){
     endDay=eval(`${endDay}+1`);   // to make end date inclusive
     let startDateObj=new Date(startYear,startMonth,startDay);
     let endDateObj=new Date(endYear,endMonth,endDay);
-    updateTime(startDateObj,endDateObj)
+    rohitTimeCalculation(startDateObj,endDateObj);
+    updateTime(startDateObj,endDateObj);
 }
-
+let totalHours;
+let elapsedHours;
 function updateTime(startDateObj,endDateObj){
     intervalID=setInterval(()=>{
         let today=new Date();
-        let totalHours=Math.trunc((endDateObj.getTime()-startDateObj.getTime())/1000/60/60);
-        let elapsedHours=Math.trunc((today.getTime()-startDateObj.getTime())/1000/60/60);
+        totalHours=Math.trunc((endDateObj.getTime()-startDateObj.getTime())/1000/60/60);
+        elapsedHours=Math.trunc((today.getTime()-startDateObj.getTime())/1000/60/60);
         let diffInMilliSec=endDateObj.getTime()-today.getTime();
         let hoursLeft=Math.trunc(diffInMilliSec/1000/60/60);
         let minutesLeft=Math.trunc(((diffInMilliSec/1000/60/60)%1)*60);
@@ -96,4 +98,29 @@ let reset=()=>{
     document.querySelector('.display').innerHTML='';
     document.querySelector('#start-date').value='';
     document.querySelector('#end-date').value='';
+    document.querySelector('.rohit-display').innerHTML=``;
+    rohitDisplayElement.classList.add("hide");
 }
+
+//rohit sir calculation
+function rohitTimeCalculation(startDateObj,endDateObj){
+    let today=new Date();
+    let rohitTotalHours= (Math.floor((endDateObj.getTime()-startDateObj.getTime())/1000/60/60))*0.625-15;
+    let rohitElapsedHours= Math.floor(((today.getTime()-startDateObj.getTime())/1000/60/60)*0.625);
+    let rohitDisplayElement=document.querySelector('.rohit-display');
+    rohitDisplayElement.innerHTML=`
+    <div class="total rohit-total">
+        <div class="rohit-info-text">Total Hours</div>
+            <div class="rohit-info-data">${rohitTotalHours}</div>
+        </div>
+        <div class="elapsed rohit-elapsed">
+            <div class="rohit-info-text">Elapsed Hours</div>
+        <div class="rohit-info-data">${rohitElapsedHours}</div>
+    </div>`
+}
+let rohitBtn=document.querySelector('.rohit-btn');
+let rohitDisplayElement=document.querySelector('.rohit-display');
+rohitBtn.addEventListener('click',()=>{
+    rohitDisplayElement.classList.toggle('hide');
+    document.querySelector('.fa-angle-down').classList.toggle('rotate')
+})

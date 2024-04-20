@@ -44,7 +44,7 @@ input{
     font-family: "Josefin Sans", sans-serif;
     font-weight: 300;
 }
-button{
+button,.btn-text{
     height: 40px;
     width: 20rem;
     margin: 1rem;
@@ -53,6 +53,7 @@ button{
     background-color: #3282B8;
     color: #fff;
     font-size: 2.5rem;
+    cursor: pointer;
 }
 button:active{
     background-color: #3282b8bd;
@@ -92,9 +93,6 @@ label{
 }
 .info-data{
     font-size: 3.5rem;
-}
-.info-text{
-    font-size: 2rem;
 }
 .remaining-top{
     display: flex;
@@ -170,4 +168,59 @@ footer a{
 }
 footer a:visited{
     color: #3282b8;
+}
+
+/* Rohit sir calculation */
+.rohit-sir-calculation{
+    margin: 0 8px;
+    text-align: center;
+}
+.rohit-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* cursor: pointer; */
+}
+.btn-text{
+    padding: 5px;
+    width: 30rem;
+    margin-bottom: -1px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.fa-angle-down{
+    font-size: 20px;
+    transition: transform 0.5s;
+}
+.rotate{
+    transform: rotate(180deg);
+}
+.rohit-total-and-elapsed{
+    position: relative;
+    top: -20px;
+    z-index: -1;
+    margin: 0 auto;
+    background-color: #12517a2d;
+    padding: 35px 0 20px 0;
+    border-radius:100px;
+    justify-content: space-around;
+    height: 128px;
+    overflow: hidden;
+    transition: padding .5s;
+    transition:  .5s;
+}
+.rohit-total,.rohit-elapsed{
+    padding: 8px 25px;
+    overflow: hidden;
+}
+.rohit-info-text{
+    font-size: 1.5rem;
+}
+.rohit-info-data{
+    font-size: 3rem;
+}
+.hide{
+    height: 0;
+    padding: 0;
 }
