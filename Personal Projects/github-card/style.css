@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #414141;
+    color: aliceblue;
+}
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 24px;
+}
+#username{
+    height: 28px;
+    margin: 4px 0 0 8px;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+    background-color: #e4e4e4;
+}
+
+/*Card Styling*/
+.box{
+    padding: 20px;
+    width: 300px;
+    border-radius: 20px;
+    background-color: #f4f4f4;
+    margin-top: 50px;
+}
+
+.image{
+    display: flex;
+    padding: 20px ;
+    background-color: #4070F4;
+    margin: -20px;
+    border-radius: 20px 20px 0 10px;
+    justify-content: center;
+}
+.image img{
+    border-radius: 50%;
+    width: 120px;
+    border: 3px solid white;
+    padding: 3px;
+}
+.content{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.content p{
+    color: #000;
+    font-size: 18px;
+}
+.content .small-box-copy{
+    width: 30px;
+    position: absolute;
+    right: -20px;
+    height: 30px;
+    border-radius:0 25px 0 0;
+    background-color: #f4f4f4;
+}
+.content .small-box{
+    width: 30px;
+    position: absolute;
+    right: -20px;
+    top: -10px;
+    height: 30px;
+    background-color: #4070F4;
+}
+
+.button{
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    color: white;
+    background-color: #2b5ed6;
+    border-radius: 10px;
+}
+
+.profileLink{
+    text-decoration: none;
+    color: white;
+}
+.content .name{
+    font-size: 28px;
+}
+
+#submitBtn{
+    height: 32px;
+    width: 80px;
+    border-radius: 15px;
+    border: none;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    display: none;
+    margin-top: 25px;
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid #ffffff;
+    animation:
+      l20-1 0.8s infinite linear alternate,
+      l20-2 1.6s infinite linear;
+  }
+  @keyframes l20-1{
+     0%    {clip-path: polygon(50% 50%,0       0,  50%   0%,  50%    0%, 50%    0%, 50%    0%, 50%    0% )}
+     12.5% {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100%   0%, 100%   0%, 100%   0% )}
+     25%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 100% 100%, 100% 100% )}
+     50%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+     62.5% {clip-path: polygon(50% 50%,100%    0, 100%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+     75%   {clip-path: polygon(50% 50%,100% 100%, 100% 100%,  100% 100%, 100% 100%, 50%  100%, 0%   100% )}
+     100%  {clip-path: polygon(50% 50%,50%  100%,  50% 100%,   50% 100%,  50% 100%, 50%  100%, 0%   100% )}
+  }
+  @keyframes l20-2{ 
+    0%    {transform:scaleY(1)  rotate(0deg)}
+    49.99%{transform:scaleY(1)  rotate(135deg)}
+    50%   {transform:scaleY(-1) rotate(0deg)}
+    100%  {transform:scaleY(-1) rotate(-135deg)}
+  }
